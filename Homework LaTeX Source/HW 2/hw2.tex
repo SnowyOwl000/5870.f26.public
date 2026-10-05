@@ -1,0 +1,112 @@
+\DocumentMetadata{
+    lang=en,
+    pdfstandard=ua-2,
+    pdfstandard=a-4f,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE}
+}
+\documentclass{article}
+
+\def\showProblem{1}
+%\def\showSolution{1}
+%\def\showOutcomes{1}
+
+\newif\ifshadedsectiontitles
+\shadedsectiontitlestrue
+
+\newcommand{\semester}{Fall}
+\newcommand{\cyear}{2026}
+\newcommand{\crn}{40777/48254}
+\newcommand{\homeworknum}{2}
+\newcommand{\duedate}{\emph{Monday, October 19, 2026 2400h}}
+
+\newcommand{\docsupport}{../../../../../Support}
+\newcommand{\doccourse}{../../../../../Courses/5870.course}
+\newcommand{\doccontent}{\doccourse/Homework/Collection}
+
+\input{\docsupport/LaTeX/doc-common-new}
+\tagpdfsetup{math/alt/use}
+\setcounter{secnumdepth}{-1}
+\tagpdfsetup{table/header-rows=1}
+
+\begin{document}
+
+    \input{\doccourse/5870.header.tex}
+
+    \hwSetup
+
+    \if\showOutcomes0
+    \section{Part I. Problems For Everyone. 10 points each.}
+    \fi
+
+    \hwBegin
+
+    \renderProblem{\doccontent/BVG/Ch03/bvg-3-1.tex}
+
+    \renderProblem{\doccontent/BVG/Ch03/bvg-3-3.tex}
+
+    % sw 2 1 8
+    \renderProblem{\doccontent/SW/Ch02/sw-2-1-8.tex}
+
+    % gt c 5 2
+    % gt c 11 3
+    \renderProblem{\doccontent/GT/Ch05/gt-c-5-2.tex}
+
+    \if\showOutcomes0
+    \if\showSolution0
+    \thispagestyle{firstpage}
+    \fi
+    \newpage
+    \fi
+
+    \renderProblem{\doccontent/GT/Ch11/gt-c-11-3.tex}
+
+    % other sort 5
+    % other sort 4
+    \renderProblem{\doccontent/Other/Sorting/sort4.tex}
+
+    \renderProblem{\doccontent/Other/Sorting/sort5.tex}
+
+    % gt c 9 8
+    \renderProblem{\doccontent/GT/Ch09/gt-c-9-8.tex}
+
+    \if\showOutcomes0
+    \setcounter{myenumi}{\theenumi}
+\end{list}
+\newpage
+\section{Part II. Larger Problems For Everyone. 20 points each.}
+\begin{list}{\textbf{\arabic{enumi}}}{\usecounter{enumi}\setlength{\itemsep}{0.25in}}
+    \setcounter{enumi}{\themyenumi}
+    \fi
+
+    % clrs 4 4
+    \renderProblem{\doccontent/CLRS/Ch04/clrs-prob-4-4.tex}
+
+    %--
+    % josephus
+    \if\showOutcomes0
+    \newpage
+    \fi
+
+    \if\showOutcomes0
+    \setcounter{myenumi}{\theenumi}
+    \end{list}
+    \newpage
+    \section{Part III. Problems For Graduate Students. 20 points each.}
+    \begin{list}{\textbf{\arabic{enumi}}}{\usecounter{enumi}\setlength{\itemsep}{0.25in}}
+    \setcounter{enumi}{\themyenumi}
+    \fi
+
+    \renderProblem{\doccontent/BVG/Ch03/bvg-3-josephus.tex}
+
+    \if\showOutcomes0
+    \newpage
+    \fi
+
+    \hwEnd
+
+    \if\showOutcomes1
+    \thispagestyle{firstpage}
+    \fi
+
+\end{document}
