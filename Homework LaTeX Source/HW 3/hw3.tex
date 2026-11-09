@@ -1,0 +1,80 @@
+\DocumentMetadata{
+    lang=en,
+    pdfstandard=ua-2,
+    pdfstandard=a-4f,
+    tagging=on,
+    tagging-setup={math/setup=mathml-SE}
+}
+\documentclass{article}
+
+\def\showProblem{1}
+%\def\showSolution{1}
+%\def\showOutcomes{1}
+
+\newif\ifshadedsectiontitles
+\shadedsectiontitlestrue
+
+\newcommand{\semester}{Fall}
+\newcommand{\cyear}{2026}
+\newcommand{\crn}{40777/48254}
+\newcommand{\homeworknum}{3}
+\newcommand{\duedate}{\emph{Friday, November 13, 2026 2400h}}
+
+\newcommand{\docsupport}{../../../../../Support}
+\newcommand{\doccourse}{../../../../../Courses/5870.course}
+\newcommand{\doccontent}{\doccourse/Homework/Collection}
+
+\input{\docsupport/LaTeX/doc-common-new}
+\tagpdfsetup{math/alt/use}
+\setcounter{secnumdepth}{-1}
+\tagpdfsetup{table/header-rows=1}
+
+\usetikzlibrary{decorations.markings}
+
+\begin{document}
+
+    \input{\doccourse/5870.header.tex}
+
+    \hwSetup
+
+    \if\showOutcomes0
+    \section{Part I. Problems For Everyone. 10 points each.}
+    \fi
+
+    \hwBegin
+
+    \renderProblem{\doccontent/GT/Ch07/gt-c-7-7.tex}
+
+    \renderProblem{\doccontent/GT/Ch04/gt-r-4-7.tex}
+
+    \renderProblem{\doccontent/SW/Ch03/sw-3-3-11.tex}
+
+    \renderProblem{\doccontent/GT/Ch07/gt-a-7-4.tex}
+
+    \renderProblem{\doccontent/GT/Ch10/gt-r-10-1.tex}
+
+    \renderProblem{\doccontent/GT/Ch10/gt-r-10-4.tex}
+
+    \renderProblem{\doccontent/Other/Graphs/kruskal2.tex}
+
+    \if\showOutcomes0
+    \newpage
+    \fi
+
+    \renderProblem{\doccontent/Other/Graphs/prim2.tex}
+
+    \renderProblem{\doccontent/Other/Graphs/dijkstra2.tex}
+
+    \if\showOutcomes0
+    \newpage
+    \fi
+
+    \renderProblem{\doccontent/Other/Graphs/scc2.tex}
+
+    \hwEnd
+
+    \if\showOutcomes1
+    \thispagestyle{firstpage}
+    \fi
+
+\end{document}
